@@ -142,29 +142,35 @@ This template will be automatically generated with different Target number and n
 Target Number,	Name,	//empty,	//empty,	//empty,	//empty<br/>
 Target Number + Name<br/>
 •	It should follow the specification mentioned in the information file.<br/>
+  <br/>
 2nd row (Pure Text):<br/>
 “First Distance”,	//empty,	//empty,	//empty,	//empty,	//empty<br/>
 First Distance<br/>
 •	The first round of shooting<br/>
 •	It is a pure text” First Distance” to allow the score keepers to enter the score correct<br/>
 •	This line would NOT be inputted<br/>
+  <br/>
 3rd to 8th row:<br/>
 Score,	Score,	Score,	Score,	Score,	Score<br/>
 Score<br/>
 •	Format: Number ranged from (1-10), character “M” or ”m” and character “X” or “x”<br/>
 o	Notes: M= missed | X=hitting the bull eye<br/>
+  <br/>
 9th row(Pure Text)<br/>
 “Second Distance”	//empty	//empty	//empty	//empty	//empty<br/>
 Second Distance<br/>
 •	The second round of shooting<br/>
 •	It is a pure text ” Second Distance” to allow the score keepers to enter the score correct<br/>
 •	This line would NOT be inputted<br/>
+  <br/>
 10th to 15th row<br/>
 Score,	Score,	Score,	Score,	Score,	Score<br/>
 Score<br/>
 •	Format: Number ranged from (1-10), character “M” or ”m” and character “X” or “x”<br/>
 o	Notes: M= missed | X=hitting the bull eye<br/>
  <br/>
+  <br/>
+  <br/>
 Field Specification of Archers Result (ArcherResult.csv)<br/>
 The result will be divided according to divisions. In this case, we would generate 8 of these files separately.<br/>
 The result is sorted according to the ranking of the archer. The one with higher ranking should be placed on top.<br/>
@@ -172,9 +178,11 @@ The result is sorted according to the ranking of the archer. The one with higher
 Division,	//empty,	//empty,	//empty,	//empty,	//empty<br/>
 Division<br/>
 •	Please refer to the specification of information file<br/>
+  <br/>
 2nd Row (Pure text):<br/>
 “Target Number”,	“Name”,	“1st Distance Score”,	“2nd Distance Score”,	“Total Score”	“Number of ‘10+X’”,	“Number of ‘X’”	“Ranking”<br/>
 <br/>
+  <br/>
 3rd rows and onwards<br/>
 Target Number,	Name,	1st Distance Score,	2nd Distance Score,	Total Score	Number of ‘10+X’,	Number of ‘X’,	Ranking<br/>
 <br/>
