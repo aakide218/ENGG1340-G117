@@ -204,7 +204,7 @@ Total Score<br/>
 •	Format: Positive integers, the text “DQ”<br/>
 Number of ‘10+X’<br/>
 •	This should display the number of arrows that score X (the bull eye) and ‘10’<br/>
-•	If the archer is disqualified, empty space (“”) is outputted<br/><br/>
+•	If the archer is disqualified, empty space (“”) is outputted<br/>
 •	Format: Positive integers, empty space (“”)<br/>
 Number of ‘X’<br/>
 •	This should display the number of arrows that score X (the bull eye)<br/>
