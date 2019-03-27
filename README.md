@@ -85,31 +85,38 @@ Main functions will be developed in separated c++ files and then linked by a hea
 <br/>
  
 Field specification of the information file (File name: TargetAssignment.csv):<br/>
+<br/>
 Target Number, 	Name,	HKAA Archer number,	HKAA Affiliated Organization,	Coach Name,	Division<br/>
-
+<br/>
 Notes: HKAA= Hong Kong Archery Association<br/>
+<br/>
 Target Number (It is used to indicate which target the archers are shooting during the competition)<br/>
 •	It would be the Key Field for this database<br/>
 •	It is unique, and every archer have it.<br/>
 •	Format:  A number followed by a capital letter from A-F.<br/>
 o	Example: 1A, 20F<br/>
+<br/>
 Name<br/>
 •	It is in English<br/>
 o	We would consider if Chinese name can be included when we are developing the project<br/>
 •	Format: English letters and the first letter of each words in their name should be capital.<br/>
 o	Example: Chan Tai Ming<br/>
+<br/>
 Archer number<br/>
 •	If the archers are not yet registered for the membership of HKAA, then they would have a archer number, but the non-registered archer would be indicated as “Temporary Registered”<br/>
 •	Format: string: M+4 numbers+S or “Temporary Registered”<br/>
 o	Example: M6485S, Temporary Registered<br/>
+<br/>
 HKAA Affiliated Organization<br/>
 •	Every archers should belong to an affiliated organization with HKAA in order to participate in our competition<br/>
 •	Format: English letters<br/>
 o	Example: HKU, PolyU<br/>
+<br/>
 Coach Name<br/>
 •	Not every archers have a coach. If not, NA will be typed<br/>
 •	Format: English letters and the first letter of each words in their name should be capital.<br/>
 o	Example: Chan Tai Ming, NA<br/>
+<br/>
 Division<br/>
 •	The naming of each division must follow these abbreviation<br/>
 Full Name 	Alias<br/>
@@ -122,6 +129,7 @@ Recurve Intermediate Women 	RIW<br/>
 Recurve Advanced Men 	RAM<br/>
 Recurve Advanced Women 	RAW<br/>
 •	Format: All capital letters and follow the abbreviation list.<br/>
+<br/>
 <br/>
 <br/>
 Field Specification for the Scores of archers (File Name: <Target Number>.csv)<br/>
