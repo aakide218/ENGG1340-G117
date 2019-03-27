@@ -21,14 +21,14 @@ For the specification of field of the csv files, see the description below.
 Function description:
 1.	Read the information file into the program (TargetAssignment.csv) 
 Input:
-•	Dynamic array: info
-•	Static: num_archers, info_filename
+Dynamic array: info
+Static: num_archers, info_filename
 Description:
-•	The user input the filename of the information file. The program will receive input the csv file 
-•	It will unpack the lines of string into a dynamic array.
-o	Function 2 below will be called to check if the data inputted is in the correct format.
-o	If there are incorrect input, a message will be displayed to request the user to correct the displayed information.
-•	If all the inputs are valid, a successful input message will be displayed.
+The user input the filename of the information file. The program will receive input the csv file 
+It will unpack the lines of string into a dynamic array.
+Function 2 below will be called to check if the data inputted is in the correct format.
+If there are incorrect input, a message will be displayed to request the user to correct the displayed information.
+If all the inputs are valid, a successful input message will be displayed.
 
 2.	Display invalid input message if the format of the inputted field does not match the predefined format.
 Description:
