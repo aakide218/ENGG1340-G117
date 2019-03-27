@@ -19,191 +19,188 @@ For the specification of field of the csv files, see the description below.
 
  
 Function description:
-1.	Read the information file into the program (TargetAssignment.csv) 
-Input:
-Dynamic array: info
-Static: num_archers, info_filename
-Description:
-The user input the filename of the information file. The program will receive input the csv file 
-It will unpack the lines of string into a dynamic array.
-Function 2 below will be called to check if the data inputted is in the correct format.
-If there are incorrect input, a message will be displayed to request the user to correct the displayed information.
-If all the inputs are valid, a successful input message will be displayed.
+1.	Read the information file into the program (TargetAssignment.csv) <br/>
+Description:<br/>
+•	The user input the filename of the information file. The program will receive input the csv file <br/>
+•	It will unpack the lines of string into a dynamic array.<br/>
+o	Function 2 below will be called to check if the data inputted is in the correct format.<br/>
+o	If there are incorrect input, a message will be displayed to request the user to correct the displayed information.<br/>
+•	If all the inputs are valid, a successful input message will be displayed.<br/>
 
-2.	Display invalid input message if the format of the inputted field does not match the predefined format.
-Description:
-•	This function receives a single line of input to check if all fields are valid.
-•	If the format of a/some field(s) does not match, the function will return which rows and columns of record has incorrect inputs.
+2.	Display invalid input message if the format of the inputted field does not match the predefined format.<br/>
+Description:<br/>
+•	This function receives a single line of input to check if all fields are valid.<br/>
+•	If the format of a/some field(s) does not match, the function will return which rows and columns of record has incorrect inputs.<br/>
 
-3.	Generate the template files of the score of each archer <Target Number>.csv. (optional)
-Description:
-•	After performing function 1, this function will be available to be used.
-•	This function generates the template of <TargetNumber>.csv files according to the TargetAssignment.file inputted and file specification below
-•	An error will be outputted if the files cannot be generated
+3.	Generate the template files of the score of each archer <Target Number>.csv. (optional)<br/>
+Description:<br/>
+•	After performing function 1, this function will be available to be used.<br/>
+•	This function generates the template of <TargetNumber>.csv files according to the TargetAssignment.file inputted and file specification below<br/>
+•	An error will be outputted if the files cannot be generated<br/>
 
-4.	Read the files containing score of each archer automatically (<Target Number>.csv) according to the information specified in the information file (TargetAssignment.csv)
-Description:
-•	This function read all <TargetNumber>.csv files according to the inputted TargetAssignment.csv file
-•	It will calculate the sum of the score of each distance and total score of each archer and count the number of ’10’ and ‘X’ of each archer.
-•	The result will be stored to the dynamic array generated in function 1
+4.	Read the files containing score of each archer automatically (<Target Number>.csv) according to the information specified in the information file (TargetAssignment.csv)<br/>
+Description:<br/>
+•	This function read all <TargetNumber>.csv files according to the inputted TargetAssignment.csv file<br/>
+•	It will calculate the sum of the score of each distance and total score of each archer and count the number of ’10’ and ‘X’ of each archer.<br/>
+•	The result will be stored to the dynamic array generated in function 1<br/>
 
-5.	Give a rank to the archer according to their division in the contest
-Description:
-•	A rank is given to the archer according to the criteria above and then the result will be stored to the dynamic array generated in function 1
+5.	Give a rank to the archer according to their division in the contest<br/>
+Description:<br/>
+•	A rank is given to the archer according to the criteria above and then the result will be stored to the dynamic array generated in function 1<br/>
 
-6.	Generate an Archer result file (ArcherResult.csv)
-Description:
-•	A filename is read to generate the archer result file according to the dynamic array generated in function 1. 
-•	If the file cannot be generated, an error message will be displayed.
+6.	Generate an Archer result file (ArcherResult.csv)<br/>
+Description:<br/>
+•	A filename is read to generate the archer result file according to the dynamic array generated in function 1. <br/>
+•	If the file cannot be generated, an error message will be displayed.<br/>
 
-7.	Edit or delete <Target Number>.csv if any archers find wrong data entry
-Description:
-•	Target number is inputted by the user.
-•	If the inputted target number does not exists, a error message will be displayed to request another input. 
-•	If the inputted target number exists, the content of that <Target Number>.csv file will be read and displayed.
-o	User can specify which rows and columns to be edited.
-•	That <TargetNumber>.csv file and the dynamic array generated in function 1 will be updated
+7.	Edit or delete <Target Number>.csv if any archers find wrong data entry<br/>
+Description:<br/>
+•	Target number is inputted by the user.<br/>
+•	If the inputted target number does not exists, a error message will be displayed to request another input. <br/>
+•	If the inputted target number exists, the content of that <Target Number>.csv file will be read and displayed.<br/>
+o	User can specify which rows and columns to be edited.<br/>
+•	That <TargetNumber>.csv file and the dynamic array generated in function 1 will be updated<br/>
 
-8.	Delete records if any disqualification is recorded
-Description:
-•	The target number required to be inputted 
-•	A new target assignment file is generated with division marked as DQ
-•	A new archer result file is generated with all the column marked as DQ. 
-•	The dynamic array generated in function 1 will be updated
+8.	Delete records if any disqualification is recorded<br/>
+Description:<br/>
+•	The target number required to be inputted <br/>
+•	A new target assignment file is generated with division marked as DQ<br/>
+•	A new archer result file is generated with all the column marked as DQ. <br/>
+•	The dynamic array generated in function 1 will be updated<br/>
 
  
-Code Requirement:
-Dynamic Memory Management:
+Code Requirement:<br/>
+Dynamic Memory Management:<br/>
 Dynamic array is used to store the information of each archer specified below. Since the number of participants of each contest is different from year to year, the exact size of array is not specified. Dynamic array is therefore used to save memory space.
-
-File input/output:
-A target assignment file and the score files of each archer must be inputted to generate a competition report and then output the report in .csv format.
-
-Data manipulation:
-After inputting the data, they are processed to generate a competition report, includes sorting and adding records. Moreover, functions of searching, editing and adding a specific record will be included.
-
-Program codes in multiple files:
-Main functions will be developed in separated c++ files and then linked by a header file. The main functions are inputting target assignment and scores of archers, process the inputted data, outputting the processed data into a competition report and editing the inputted records. 
-	
-
+<br/>
+File input/output:<br/>
+A target assignment file and the score files of each archer must be inputted to generate a competition report and then output the report in .csv format.<br/>
+<br/>
+Data manipulation:<br/>
+After inputting the data, they are processed to generate a competition report, includes sorting and adding records. Moreover, functions of searching, editing and adding a specific record will be included.<br/>
+<br/>
+Program codes in multiple files:<br/>
+Main functions will be developed in separated c++ files and then linked by a header file. The main functions are inputting target assignment and scores of archers, process the inputted data, outputting the processed data into a competition report and editing the inputted records. <br/>
+<br/>	
+<br/>
  
-Field specification of the information file (File name: TargetAssignment.csv):
-Target Number, 	Name,	HKAA Archer number,	HKAA Affiliated Organization,	Coach Name,	Division
+Field specification of the information file (File name: TargetAssignment.csv):<br/>
+Target Number, 	Name,	HKAA Archer number,	HKAA Affiliated Organization,	Coach Name,	Division<br/>
 
-Notes: HKAA= Hong Kong Archery Association
-Target Number (It is used to indicate which target the archers are shooting during the competition)
-•	It would be the Key Field for this database
-•	It is unique, and every archer have it.
-•	Format:  A number followed by a capital letter from A-F.
-o	Example: 1A, 20F
-Name
-•	It is in English
-o	We would consider if Chinese name can be included when we are developing the project
-•	Format: English letters and the first letter of each words in their name should be capital.
-o	Example: Chan Tai Ming
-Archer number
-•	If the archers are not yet registered for the membership of HKAA, then they would have a archer number, but the non-registered archer would be indicated as “Temporary Registered”
-•	Format: string: M+4 numbers+S or “Temporary Registered”
-o	Example: M6485S, Temporary Registered
-HKAA Affiliated Organization
-•	Every archers should belong to an affiliated organization with HKAA in order to participate in our competition
-•	Format: English letters
-o	Example: HKU, PolyU
-Coach Name
-•	Not every archers have a coach. If not, NA will be typed
-•	Format: English letters and the first letter of each words in their name should be capital.
-o	Example: Chan Tai Ming, NA
-Division
-•	The naming of each division must follow these abbreviation
-Full Name 	Alias
-Recurve Beginner Men 	RBM
-Recurve Beginner Women 	RBW
-Recurve Elementary Men 	REM
-Recurve Elementary Women 	REW
-Recurve Intermediate Men 	RIM
-Recurve Intermediate Women 	RIW
-Recurve Advanced Men 	RAM
-Recurve Advanced Women 	RAW
-•	Format: All capital letters and follow the abbreviation list.
-
-
-Field Specification for the Scores of archers (File Name: <Target Number>.csv)
-Notes: The filename is written according to the target number specified in the TargetAssignment.csv file
-
-The competition is divided into two rounds and then subdivided into six rounds shooting six arrows each.
-This template will be automatically generated with different Target number and name according to the Information file
-
-1st row:
-Target Number,	Name,	//empty,	//empty,	//empty,	//empty
-Target Number + Name
-•	It should follow the specification mentioned in the information file.
-2nd row (Pure Text):
-“First Distance”,	//empty,	//empty,	//empty,	//empty,	//empty,
-First Distance
-•	The first round of shooting
-•	It is a pure text” First Distance” to allow the score keepers to enter the score correct
-•	This line would NOT be inputted
-3rd to 8th row:
-Score,	Score,	Score,	Score,	Score,	Score
-Score
-•	Format: Number ranged from (1-10), character “M” or ”m” and character “X” or “x”
-o	Notes: M= missed | X=hitting the bull eye
-9th row(Pure Text)
-“Second Distance”	//empty	//empty	//empty	//empty	//empty
-Second Distance
-•	The second round of shooting
-•	It is a pure text ” Second Distance” to allow the score keepers to enter the score correct
-•	This line would NOT be inputted
-10th to 15th row
-Score,	Score,	Score,	Score,	Score,	Score
-Score
-•	Format: Number ranged from (1-10), character “M” or ”m” and character “X” or “x”
-o	Notes: M= missed | X=hitting the bull eye
- 
-Field Specification of Archers Result (ArcherResult.csv)
-The result will be divided according to divisions. In this case, we would generate 8 of these files separately.
-The result is sorted according to the ranking of the archer. The one with higher ranking should be placed on top.
-1st Row:
-Division,	//empty,	//empty,	//empty,	//empty,	//empty
-Division
-•	Please refer to the specification of information file
-2nd Row (Pure text):
-“Target Number”,	“Name”,	“1st Distance Score”,	“2nd Distance Score”,	“Total Score”	“Number of ‘10+X’”,	“Number of ‘X’”	“Ranking”
-
-3rd rows and onwards
-Target Number,	Name,	1st Distance Score,	2nd Distance Score,	Total Score	Number of ‘10+X’,	Number of ‘X’,	Ranking
-
-Target Number
-•	Please refer to the specification of information file
-Name
-•	Please refer to the specification of information file
-1st Distance Score
-•	This should be the sum of the score in the 1st round of shooting according to the archer scoring
-•	If the archer is disqualified, empty space (“”) is outputted
-•	Format: Positive integers, empty space (“”)
-2nd Distance Score
-•	This should be the sum of the score in the 2nd round of shooting according to the archer scoring
-•	If the archer is disqualified, empty space (“”) is outputted
-•	Format: Positive integers, empty space (“”)
-Total Score
-•	This should be the sum of scores of 1st distance and 2nd distance 
-•	If the archer is disqualified, “DQ” is outputted
-•	Format: Positive integers, the text “DQ”
-Number of ‘10+X’
-•	This should display the number of arrows that score X (the bull eye) and ‘10’
-•	If the archer is disqualified, empty space (“”) is outputted
-•	Format: Positive integers, empty space (“”)
-Number of ‘X’
-•	This should display the number of arrows that score X (the bull eye)
-•	If the archer is disqualified, empty space (“”) is outputted
-•	Format: Positive integers, empty space (“”)
-Ranking
-•	The archers will be ranked according to their total scores
-•	The disqualified archers will not be ranked
-•	It is ranked according to these rules
-o	1st: ranked according to their total score
-o	2nd: ranked according to their numbers of 10(including ‘X’)
-o	3rd: ranked according to their numbers of ‘X’
-o	4th: if still ties, then they both have the same ranking
-•	If the archer is disqualified, “DQ” is outputted
-•	Format: Positive integers, “DQ”
+Notes: HKAA= Hong Kong Archery Association<br/>
+Target Number (It is used to indicate which target the archers are shooting during the competition)<br/>
+•	It would be the Key Field for this database<br/>
+•	It is unique, and every archer have it.<br/>
+•	Format:  A number followed by a capital letter from A-F.<br/>
+o	Example: 1A, 20F<br/>
+Name<br/>
+•	It is in English<br/>
+o	We would consider if Chinese name can be included when we are developing the project<br/>
+•	Format: English letters and the first letter of each words in their name should be capital.<br/>
+o	Example: Chan Tai Ming<br/>
+Archer number<br/>
+•	If the archers are not yet registered for the membership of HKAA, then they would have a archer number, but the non-registered archer would be indicated as “Temporary Registered”<br/>
+•	Format: string: M+4 numbers+S or “Temporary Registered”<br/>
+o	Example: M6485S, Temporary Registered<br/>
+HKAA Affiliated Organization<br/>
+•	Every archers should belong to an affiliated organization with HKAA in order to participate in our competition<br/>
+•	Format: English letters<br/>
+o	Example: HKU, PolyU<br/>
+Coach Name<br/>
+•	Not every archers have a coach. If not, NA will be typed<br/>
+•	Format: English letters and the first letter of each words in their name should be capital.<br/>
+o	Example: Chan Tai Ming, NA<br/>
+Division<br/>
+•	The naming of each division must follow these abbreviation<br/>
+Full Name 	Alias<br/>
+Recurve Beginner Men 	RBM<br/>
+Recurve Beginner Women 	RBW<br/>
+Recurve Elementary Men 	REM<br/>
+Recurve Elementary Women 	REW<br/>
+Recurve Intermediate Men 	RIM<br/>
+Recurve Intermediate Women 	RIW<br/>
+Recurve Advanced Men 	RAM<br/>
+Recurve Advanced Women 	RAW<br/>
+•	Format: All capital letters and follow the abbreviation list.<br/>
+<br/>
+<br/>
+Field Specification for the Scores of archers (File Name: <Target Number>.csv)<br/>
+Notes: The filename is written according to the target number specified in the TargetAssignment.csv file<br/>
+<br/>
+The competition is divided into two rounds and then subdivided into six rounds shooting six arrows each.<br/>
+This template will be automatically generated with different Target number and name according to the Information file<br/>
+<br/>
+1st row:<br/>
+Target Number,	Name,	//empty,	//empty,	//empty,	//empty<br/>
+Target Number + Name<br/>
+•	It should follow the specification mentioned in the information file.<br/>
+2nd row (Pure Text):<br/>
+“First Distance”,	//empty,	//empty,	//empty,	//empty,	//empty<br/>
+First Distance<br/>
+•	The first round of shooting<br/>
+•	It is a pure text” First Distance” to allow the score keepers to enter the score correct<br/>
+•	This line would NOT be inputted<br/>
+3rd to 8th row:<br/>
+Score,	Score,	Score,	Score,	Score,	Score<br/>
+Score<br/>
+•	Format: Number ranged from (1-10), character “M” or ”m” and character “X” or “x”<br/>
+o	Notes: M= missed | X=hitting the bull eye<br/>
+9th row(Pure Text)<br/>
+“Second Distance”	//empty	//empty	//empty	//empty	//empty<br/>
+Second Distance<br/>
+•	The second round of shooting<br/>
+•	It is a pure text ” Second Distance” to allow the score keepers to enter the score correct<br/>
+•	This line would NOT be inputted<br/>
+10th to 15th row<br/>
+Score,	Score,	Score,	Score,	Score,	Score<br/>
+Score<br/>
+•	Format: Number ranged from (1-10), character “M” or ”m” and character “X” or “x”<br/>
+o	Notes: M= missed | X=hitting the bull eye<br/>
+ <br/>
+Field Specification of Archers Result (ArcherResult.csv)<br/>
+The result will be divided according to divisions. In this case, we would generate 8 of these files separately.<br/>
+The result is sorted according to the ranking of the archer. The one with higher ranking should be placed on top.<br/>
+1st Row:<br/>
+Division,	//empty,	//empty,	//empty,	//empty,	//empty<br/>
+Division<br/>
+•	Please refer to the specification of information file<br/>
+2nd Row (Pure text):<br/>
+“Target Number”,	“Name”,	“1st Distance Score”,	“2nd Distance Score”,	“Total Score”	“Number of ‘10+X’”,	“Number of ‘X’”	“Ranking”<br/>
+<br/>
+3rd rows and onwards<br/>
+Target Number,	Name,	1st Distance Score,	2nd Distance Score,	Total Score	Number of ‘10+X’,	Number of ‘X’,	Ranking<br/>
+<br/>
+Target Number<br/>
+•	Please refer to the specification of information file<br/>
+Name<br/>
+•	Please refer to the specification of information file<br/>
+1st Distance Score<br/>
+•	This should be the sum of the score in the 1st round of shooting according to the archer scoring<br/>
+•	If the archer is disqualified, empty space (“”) is outputted<br/>
+•	Format: Positive integers, empty space (“”)<br/>
+2nd Distance Score<br/>
+•	This should be the sum of the score in the 2nd round of shooting according to the archer scoring<br/>
+•	If the archer is disqualified, empty space (“”) is outputted<br/>
+•	Format: Positive integers, empty space (“”)<br/>
+Total Score<br/>
+•	This should be the sum of scores of 1st distance and 2nd distance <br/>
+•	If the archer is disqualified, “DQ” is outputted<br/>
+•	Format: Positive integers, the text “DQ”<br/>
+Number of ‘10+X’<br/>
+•	This should display the number of arrows that score X (the bull eye) and ‘10’<br/>
+•	If the archer is disqualified, empty space (“”) is outputted<br/><br/>
+•	Format: Positive integers, empty space (“”)<br/>
+Number of ‘X’<br/>
+•	This should display the number of arrows that score X (the bull eye)<br/>
+•	If the archer is disqualified, empty space (“”) is outputted<br/>
+•	Format: Positive integers, empty space (“”)<br/>
+Ranking<br/>
+•	The archers will be ranked according to their total scores<br/>
+•	The disqualified archers will not be ranked<br/>
+•	It is ranked according to these rules<br/>
+o	1st: ranked according to their total score<br/>
+o	2nd: ranked according to their numbers of 10(including ‘X’)<br/>
+o	3rd: ranked according to their numbers of ‘X’<br/>
+o	4th: if still ties, then they both have the same ranking<br/>
+•	If the archer is disqualified, “DQ” is outputted<br/>
+•	Format: Positive integers, “DQ”<br/>
