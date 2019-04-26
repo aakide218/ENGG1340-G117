@@ -9,7 +9,7 @@
 
 
 
-//to count no of Archers
+//to count no of Archers in the contest
 //input:filename:the name of the TargetAssognment file
 //output:the number of archers
 int Count_no_of_archer(string filename) {
