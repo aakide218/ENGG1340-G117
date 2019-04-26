@@ -5,7 +5,7 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
-
+//the main function of the whole program
 int main()
 {
 	string dummy;
