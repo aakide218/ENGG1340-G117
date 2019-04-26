@@ -13,7 +13,7 @@ using namespace std;
 
 //to check archer's name and coach's name
 //input: item:name
-//       i,j:the position
+//       i,j:the position of the mistake
 void Errorchecking_name(string item, int i, int j) {
 
 	stringstream ss(item);
@@ -39,7 +39,7 @@ end:;
 }
 //to check archer's target number
 //input: item:archers' target number
-//       i,j:the position
+//       i,j:the position of the mistake
 void Errorchecking_Target_Number(string item, int i, int j) {
 	int length = item.length();
 	if (length == 0) {// to check if the Target number is empty
@@ -67,7 +67,7 @@ end:;
 }
 //to check archer number
 //input: item:archer number
-//       i,j:the position
+//       i,j:the position of the mistake
 void Errorchecking_HKAA_Archer_number(string &item, int i, int j) {
 	int length = item.length();
 	string *temp = new string[length];
@@ -105,7 +105,7 @@ void Errorchecking_HKAA_Archer_number(string &item, int i, int j) {
 
 //to check archer's organiztaion
 //input: item:archers' organization
-//       i,j:the position
+//       i,j:the position of the mistake
 void Errorchecking_HKAA_Affiliated_Organization(string item, int i, int j) {
 	int length = item.length();
 	if (length == 0) {//to check if the input is empty
@@ -123,7 +123,7 @@ end:;
 }
 //to check archer's division
 //input: item:archers' division
-//       i,j:the position
+//       i,j:the position of the mistake
 void Errorchecking_Division(string item, int i, int j) {
 	const string matchstring = "RBM RBW REM REW RIM RIW RAM RAW";
 	string temp = "";//to remove the accadental extra spacing in the division
