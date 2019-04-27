@@ -7,6 +7,10 @@
 #include <vector>
 
 //Function Description
+//This function will generate the template score files
+//Input: a: Archer Information
+//		 no_of_archer: number of archer for iteration
+//Output: Template Score files
 bool generatetemplatefile(Archer_info *a, int i) {
 	ofstream fout;
 	bool success = true;
@@ -38,7 +42,11 @@ End:;
 	fout.close();
 	return success;
 }
-
+//Function Description
+//This function will output the ArcherResult.csv
+//Input: a: Archer Information
+//		 no_of_archer: number of archer for iteration
+//Output: ArcherResult.csv
 bool GenerateArcherResult(Archer_info *a, int no_of_archer) {
 	bool success = true;
 	const string outputfilename = "ArcherResult.csv";
@@ -57,7 +65,7 @@ bool GenerateArcherResult(Archer_info *a, int no_of_archer) {
 	fout << division << endl;
 	fout << "Target Number,Name,1st Distance Score,2nd Distance Score,Total Score,Number of '10+X',Number of 'X',Ranking" << endl;
 	for (int i = 0; i < no_of_archer; i++) {
-		cout <<i<<" "<<a[i].name<<" "<<a[i].Division <<" "<<division<<endl;
+		//cout <<i<<" "<<a[i].name<<" "<<a[i].Division <<" "<<division<<endl;
 		if (a[i].Division != division) {
 			division = a[i].Division;
 			fout << endl << division << endl;

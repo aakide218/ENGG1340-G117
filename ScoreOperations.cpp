@@ -92,7 +92,7 @@ void Process_Score(int num_archers, Archer_info *a) {
 		//Total Score -> Number of 10+X -> Number of X
 		//This is used to prepare for the multi layer sorting for ranking
 		a[i].rankWeight = a[i].score.Total_score * 10000 + a[i].score.Total_10_plus_x * 100 + (a[i].score.Total_10_plus_x - a[i].score.Total_10);
-		cout << "Target Number" << a[i].Target_Number << " " << a[i].rankWeight << endl;
+		//cout << "Target Number" << a[i].Target_Number << " " << a[i].rankWeight << endl;
 	}
 }
 //Function Description

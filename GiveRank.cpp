@@ -70,7 +70,7 @@ vector <string> DivisionRank(Archer_info *a, int lower, int upper, int no_of_arc
 			}
 		}
 		if (state) {
-			cout <<"Swap"<<targetindex << " " << temp - i - 1;
+			//cout <<"Swap"<<targetindex << " " << temp - i - 1;
 			SwapInt(listnumber[targetindex], listnumber[temp - i - 1]);
 		}
 	}
