@@ -49,7 +49,14 @@ Second distance,,,,,
 ,,,,,
 ,,,,,
 
-
+Test Case 5:(using Testfile4.zip)
+Description: this test case is to demonstrate the effect of rank weight
+Guidance:1)input "TargetAssignment.csv"
+         2)input anything to confirm
+         3)input 2
+         4)input 4
+         5)exit the program
+Expected Result:refer to the archer result csv file and take a look at the rank
 
 
 
