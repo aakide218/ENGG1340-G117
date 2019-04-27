@@ -168,7 +168,9 @@ bool readscore(Archer_info *a, int No_of_archer) {
 					}
 				}
 
-				errorchecking_score(temp);
+				if (errorchecking_score(temp) == 0) {
+					cout << a[i].Target_Number << ".csv" << " row " << b << " column " << k << endl << endl;;
+				};
 				a[i].score.Score_raw.First_distance[b][k] = temp;
 				k = k + 1;
 
@@ -195,7 +197,9 @@ bool readscore(Archer_info *a, int No_of_archer) {
 						temp += item[k];
 					}
 				}
-				errorchecking_score(temp);
+				if (errorchecking_score(temp) == 0) {
+					cout << a[i].Target_Number << ".csv" << " row " << b+5 << " column " << k << endl << endl;;
+				};
 				a[i].score.Score_raw.Second_distance[b][k] = temp;
 				k = k + 1;
 				no_of_score_distance2++;
@@ -209,6 +213,7 @@ bool readscore(Archer_info *a, int No_of_archer) {
 	}
 End:;
 	if (!success) {
+		cout << "Please correct the abovementioned errors and then reexecute function2 again"<<endl;
 		cout << "Please enter something to confirm.";
 		cin >> dummy;
 	}
