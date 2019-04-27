@@ -1,0 +1,60 @@
+This is the description and guidance about the test cases.
+Test Case 1: (using testfile1.zip)
+Description: this test case is used to check the error-checking function of the program on the target assignment csv file.
+Guidance: input “TargetAssignment.csv” 
+Expected Result: the program should be able to output the row and column of the input that has the wrong format.
+Test Case 2: (using testfile2.zip)
+Description: this test case is used to check the error-checking function of the program on the score sheet csv file.
+Guidance: input “TargetAssignment.csv” 
+Expected Result: the program should be able to print out the error message for invalid score and if the entire line is missed, the program should be able to print out the name of the archer and inform him that he has missed some marks in the first/second distance
+
+Test Case 3: (using testfile3.zip)
+Description: this test case is used to check if the program can get the input and generate the archer’s result csv file correctly. Also, the function of score editing.
+Guidance:1) input “TargetAssignment.csv” 
+                  2)input anything for confirmation
+                  3)input 2 to read the score file
+                  4)input 4 to generate the archer’s result csv file(take a look at it)
+                  5)input 3 to edit the mark
+                  6)input the target number that you want to edit and the column and row afterward
+                  7)Then edit the score/DQ and not to exit the program
+                  8)and back to the menu
+                  9)input 4 to generate the archer’s result csv file again(comparing with the archer’s result.csv in (4), the mark (and maybe the rank)will change accordingly)(“DQ”will replace the archer’s rank if he or she is DQ)
+                    10)exit the program
+
+Expected Result: the archer’s file should be changed accordingly.
+
+Test Case 4: (using Testfile3.zip)
+Description: this test case is to check whether the template file generating function work fine or not
+Guidance:1)input “TargetAssignment.csv”
+                   2)input anything to confirm
+                   3)input 1
+                   5)exit the program
+Expected Result: all file should become empty(does not contain any marks)
+ The Format of the template file are shown below:
+
+(target number),(archer’s name),,,,
+First Distance,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+Second distance,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+
+
+
+
+
+
+
+
+                 
+
+
