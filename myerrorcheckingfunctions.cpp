@@ -150,13 +150,32 @@ end:;
 //input: item:score
 //output:1
 int errorchecking_score(string item) {
-	if (!(isdigit(item.c_str()[0]) || item == "M" || item == "X" || item == "x" || item == "m")) {
 
-		cout << "invalid score" << endl;
+  if (!(isdigit(item.c_str()[0])))
+      {
+  
+  if (not(item == "M" || item == "X" || item == "x" || item == "m")) {
+    
+	cout<<"invalid score"<<endl;
+	goto end;
+	
+      }
+      }
+ 
 
-		goto end;
-	}
+	
+	
 
+  else  if (stoi(item)<=0||stoi(item)>10){
+    cout<<"invalid score"<<endl;
+    goto end;
+  }
+  
+  
+  
+ 
+ 
+ 
 end:return 1;
 }
 //to check  if all char is is integer
