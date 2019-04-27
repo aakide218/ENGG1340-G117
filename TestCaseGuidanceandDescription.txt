@@ -56,7 +56,7 @@ Guidance:1)input "TargetAssignment.csv"
          3)input 2
          4)input 4
          5)exit the program
-Expected Result:refer to the archer result csv file and take a look at the rank
+Expected Result:refer to the archer result csv file and take a look at the rank of RIM
 
 
 
