@@ -145,8 +145,6 @@ bool readscore(Archer_info *a, int No_of_archer) {
 		if (fin.fail()) {
 			cout << a[i].Target_Number << endl;
 			cout << "Read Error in file opening!" << temp << endl;
-			cout << "Please input something to confirm";
-			cin >> dummy;
 			success = false;
 			fin.close();
 			goto End;
@@ -180,6 +178,7 @@ bool readscore(Archer_info *a, int No_of_archer) {
 		}
 		if (no_of_score_distance1 != 36) {
 			cout << a[i].Target_Number << " " << a[i].name << " miss some scores in the first distance" << endl;
+			success = false;
 		}
 
 		getline(fin, archer_score);
@@ -204,9 +203,14 @@ bool readscore(Archer_info *a, int No_of_archer) {
 		}
 		if (no_of_score_distance2 != 36) {
 			cout << a[i].Target_Number << " " << a[i].name << " miss some scores in the second distance" << endl;
+			success = false;
 		}
 		fin.close();
 	}
 End:;
+	if (!success) {
+		cout << "Please enter something to confirm.";
+		cin >> dummy;
+	}
 	return success;
 }
